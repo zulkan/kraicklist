@@ -1,0 +1,11 @@
+version: "2.3"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kraicklist
+    environment:
+      - FILE_DATA=/app/data.gz
+    ports:
+      - 3001:3001
